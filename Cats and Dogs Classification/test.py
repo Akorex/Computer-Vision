@@ -8,6 +8,8 @@ def evaluate(image_path, model_path, image_height=150, image_width=150, n_channe
         n_channels - 3 for rgb. 1 for black & white
     """
     # import dependencies
+    import os
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # suppress tensorflow warnings
     import numpy as np
     import tensorflow as tf
     import matplotlib.pyplot as plt
@@ -38,5 +40,15 @@ def evaluate(image_path, model_path, image_height=150, image_width=150, n_channe
     # translate for use
     if predict_proba < 0.5:
         print("Model's Prediction: This is a cat.")
+        plt.title("Model Predicted: A cat!")
     else:
         print("Model's Prediction: This is a dog.")
+        plt.title("Model Predicted: A dog!")
+    plt.show()
+
+if __name__ == '__main__':
+    #image_path = r'golden-retriever-royalty-free-image-506756303-1560962726.jpg'
+    image_path = 'cat.jpg'
+    model_path = r'dogscats_final.h5'
+
+    evaluate(image_path, model_path)
