@@ -1,5 +1,5 @@
 # Computer-Vision
-Repository on tasks on computer vision with neural networks. Tasks include Image classification, Object detection and Segmentation
+Repository on tasks on computer vision with neural networks. Tasks include Image classification, Object detection and Segmentation. For details on deployment of some of these models, you can view the [Model Playground repository](https://github.com/Akorex/Model-Playground)
 
 
 ## Recognising-bird-species-with-CNNs
